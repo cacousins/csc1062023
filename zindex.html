@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<style>
+
+*{
+	margin:  0;
+	padding:  0;
+}
+
+.box{
+
+	width:  200px;
+	height:  200px;
+	position: absolute;
+	/* STEP 2 - once you do the absolute  all the box collapse on each other*/
+	/* STEP 3 - use the top and left to position the boxes */
+}
+
+.box:nth-child(1){
+	background-color: gold;
+	z-index: 9990;	
+}
+
+.box:nth-child(2){
+	background-color: blue;
+	top:  25px;
+	left:  25px;
+	z-index: 0;
+}
+
+
+.box:nth-child(3){
+	background-color: purple;
+	top:  50px;
+	left:  50px;
+	z-index: 0;
+}
+
+
+.box:nth-child(4){
+	background-color: tomato;
+	top:  75px;
+	left:  75px;
+	z-index: 0;
+}
+
+.box:nth-child(5){
+	background-color: green;
+	top:  100px;
+	left:  100px;
+	z-index: -9999;
+}
+
+/* by default z index is 0; -1 allow to go behind all the boxes, 9999 to be on top, -9999 to be behind all*/
+	
+
+</style>
+
+
+<body>
+
+	<div class="parent">
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+		<div class="box">5</div>
+	</div>
+	
+</body>
+</html>
